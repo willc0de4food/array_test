@@ -1,0 +1,10 @@
+<% @quotes.each do |quote| -%>
+	<div class="quote">
+		<div class="list-quote"><%= quote[:text] %></div>
+		<div class="list-name"><%= quote[:name] %></div>
+	</div>
+<% end -%>
+
+<div class="quote">
+	<%= will_paginate @quotes, inner_window: 4, previous_label: '< Prev', next_label: 'Next >' %>
+</div>
